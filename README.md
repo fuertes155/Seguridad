@@ -39,6 +39,12 @@ El lanzador ejecuta dos procesos Python/Uvicorn locales: la API del panel en el 
 7. En **Reglas de detección**, ajusta el umbral de accesos fallidos o activa/desactiva reglas. Desactivar una regla no detiene el registro de eventos.
 8. Exporta el informe PDF desde la cabecera, o el CSV desde **Eventos en vivo**.
 
+Para explicar cada detección, entra a **Reglas de detección → Ver diagrama**. Selecciona AUTH-01,
+DECOY-01 o SQL-01 y utiliza **Siguiente paso**, **Anterior** o los nodos del recorrido. La guía muestra
+la solicitud, el control de bloqueo, la evaluación, SQLite y la actualización del panel. También explica
+la decisión manual de bloquear por cinco minutos. Lee la configuración guardada y refleja las reglas
+desactivadas; recorrerla no envía solicitudes ni genera evidencia.
+
 También puedes abrir el portal y escribir manualmente en el buscador o intentar iniciar sesión con datos ficticios. Las contraseñas nunca se guardan. Todas las cuentas y documentos NovaTech son ficticios.
 
 ## Qué hace cada parte
@@ -109,6 +115,7 @@ La validación realizada en este equipo encontró ambos puertos abiertos y etiqu
 | `src/pages/`                             | Una pantalla por archivo: resumen, eventos, alertas, respuesta, laboratorio, reglas y acceso. |
 | `src/components/`                        | Navegación, tablas, gráficos, detalle de evidencia y elementos compartidos. |
 | `src/hooks/`                             | Sesión, sincronización en vivo, acciones, tema, notificaciones y foco. |
+| `src/components/rules/`, `src/config/ruleFlows.ts` | Controles de reglas y diagramas educativos de AUTH-01, DECOY-01 y SQL-01. |
 | `src/services/api.ts`                    | Peticiones JSON y tratamiento de errores HTTP.                  |
 | `src/types.ts`, `src/config/`, `src/utils/` | Contratos TypeScript, etiquetas, navegación y formatos de fecha. |
 | `src/interface.css`, `src/styles/`        | Índice de estilos y archivos separados por sección y tamaño de pantalla. |

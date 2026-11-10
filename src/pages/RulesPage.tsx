@@ -3,12 +3,29 @@ import { type State } from "../types";
 import { CircleHelp, SlidersHorizontal } from "lucide-react";
 import { RuleCard } from "../components/rules/RuleCard";
 import { api } from "../services/api";
+import { useRef, useState } from "react";
+import { RuleFlowExplorer } from "../components/rules/RuleFlowExplorer";
 
 // Vista rules: conserva los datos, controles y acciones de la pantalla original.
 type Props = Pick<HoneyShieldController, "data" | "busy" | "act"> & {
   data: State;
 };
 export function RulesPage({ data, busy, act }: Props) {
+  const [explainedRule, setExplainedRule] = useState("AUTH-01");
+  const diagramHeading = useRef<HTMLHeadingElement>(null);
+  // Abre la explicación elegida y lleva allí el foco, respetando movimiento reducido.
+  const explain = (id: string) => {
+    setExplainedRule(id);
+    requestAnimationFrame(() => {
+      diagramHeading.current?.focus({ preventScroll: true });
+      diagramHeading.current?.scrollIntoView({
+        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
+        block: "start",
+      });
+    });
+  };
   return (
     <>
       <div className="rules-intro">
@@ -31,6 +48,7 @@ export function RulesPage({ data, busy, act }: Props) {
             key={rule.id}
             rule={rule}
             busy={!!busy}
+            onExplain={() => explain(rule.id)}
             save={(values) =>
               act(
                 "rule",
@@ -53,6 +71,12 @@ export function RulesPage({ data, busy, act }: Props) {
           analista.
         </p>
       </div>
+      <RuleFlowExplorer
+        rules={data.rules}
+        selectedId={explainedRule}
+        onSelect={setExplainedRule}
+        headingRef={diagramHeading}
+      />
     </>
   );
 }

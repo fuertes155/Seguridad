@@ -12,6 +12,8 @@
 @import "./styles/response.css";
 @import "./styles/lab.css";
 @import "./styles/rules.css";
+@import "./styles/rule-flow.css";
+@import "./styles/rule-response-flow.css";
 @import "./styles/details.css";
 @import "./styles/login.css";
 @import "./styles/animations.css";

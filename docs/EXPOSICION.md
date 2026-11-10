@@ -31,6 +31,23 @@
 | 8:00–9:00  | Mostrar reconocimiento Nmap y diseño de red | Un puerto abierto no equivale a una vulnerabilidad. Packet Tracer demuestra segmentación por separado.               |
 | 9:00–10:00 | Exportar el informe                         | Las afirmaciones deben estar respaldadas por registros y pruebas.                                                    |
 
+## Explicar las reglas con el diagrama interactivo
+
+En **Reglas de detección**, cada tarjeta tiene **Ver diagrama**. La guía permite elegir las tres reglas
+y recorrer cinco pasos: llegada de la solicitud, comprobación de bloqueo, evaluación de la regla,
+registro en SQLite y actualización del panel. **Anterior**, **Siguiente paso** y los nodos permiten
+controlar el ritmo de la explicación. Estos controles no ejecutan solicitudes ni generan alertas.
+
+- **Luis:** puede explicar la llegada a NovaTech, el origen observado y la comprobación del bloqueo.
+- **Samuel:** puede mostrar el paso de evaluación de AUTH-01 y SQL-01, incluidos el umbral guardado,
+  la agrupación por ventana y la diferencia entre detectar sintaxis y ejecutarla como SQL.
+- **Juan:** puede mostrar DECOY-01, la evidencia almacenada y la decisión manual de contener por cinco
+  minutos. La rama de contención explica el 429, el vencimiento y el desbloqueo anticipado.
+
+El diagrama conserva la respuesta propia de cada ejemplo: 401 para acceso rechazado, 200 para la búsqueda
+controlada y 403 para el recurso señuelo. Un bloqueo previo sustituye ese recorrido por un 429 y un evento
+de solicitud bloqueada. Desactivar una regla detiene sus alertas, pero conserva el registro de solicitudes.
+
 ## Preguntas que conviene dominar
 
 - **¿Es un antivirus?** No; es un laboratorio de engaño y observación centrado en tráfico web hacia un señuelo.

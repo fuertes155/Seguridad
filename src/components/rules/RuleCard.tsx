@@ -1,17 +1,19 @@
 import { type Rule } from "../../types";
 import { useState } from "react";
 import { Badge } from "../common/Badge";
-import { Terminal } from "lucide-react";
+import { GitBranch, Terminal } from "lucide-react";
 
 // Editor de una regla. Los límites del formulario mejoran la experiencia; Pydantic también los valida.
 export function RuleCard({
   rule,
   busy,
   save,
+  onExplain,
 }: {
   rule: Rule;
   busy: boolean;
   save: (v: { enabled: boolean; threshold?: number; window?: number }) => void;
+  onExplain: () => void;
 }) {
   // Estado local del formulario: el servidor solo cambia al activar la regla o guardar el umbral.
   const [threshold, setThreshold] = useState(rule.config.threshold || 5);
@@ -82,9 +84,20 @@ export function RuleCard({
           </span>
         </div>
       )}
-      <div className="rule-state">
-        <span className={"tiny-dot " + (!rule.enabled ? "off" : "")} />
-        {rule.enabled ? "Activa y observando" : "Desactivada"}
+      <div className="rule-footer">
+        <div className="rule-state">
+          <span className={"tiny-dot " + (!rule.enabled ? "off" : "")} />
+          {rule.enabled ? "Activa y observando" : "Desactivada"}
+        </div>
+        <button
+          type="button"
+          className="rule-explain-button"
+          aria-label={`Ver diagrama de ${rule.id}`}
+          onClick={onExplain}
+        >
+          <GitBranch size={15} aria-hidden="true" />
+          Ver diagrama
+        </button>
       </div>
     </article>
   );

@@ -102,3 +102,18 @@ Los JSON de dependencias y TypeScript permanecen intactos; se explican en README
   Sin desbordamiento de página a 321, 390 y 768 px; escritorio revisado a 1440 px.
 - Evidencia en `output/evidence/novatech-paleta-validacion.json` y capturas `novatech-nueva-paleta*.png`.
   Las comprobaciones funcionales usaron servicios y datos temporales.
+
+## Diagramas de las reglas · 10 de noviembre de 2026
+
+- Botón **Ver diagrama** en las tres tarjetas y guía interactiva integrada en Reglas de detección.
+- Cinco etapas: solicitud, bloqueo previo, evaluación, persistencia y actualización del panel. Se muestran
+  las ramas de alerta/evento y la decisión manual de contener durante cinco minutos.
+- AUTH-01 toma el umbral y la ventana guardados. Cambios sin guardar no alteran la explicación.
+  Una regla desactivada muestra el recorrido sin su alerta y conserva las respuestas propias de NovaTech.
+- Compilación de producción y comprobación estricta de TypeScript: correctas.
+- Ocho comprobaciones de navegador aprobadas: los tres accesos y respuestas HTTP, controles del recorrido,
+  ausencia de escrituras al navegar, umbral guardado, desactivación y reactivación, contención, temas y
+  adaptación móvil, y acceso con movimiento reducido. El paso seleccionado se conserva al refrescar datos.
+- Sin errores JavaScript no capturados ni desbordamiento de página o controles a 321, 390 y 1024 px.
+- Evidencia en `output/evidence/diagramas-reglas-validacion.json` y capturas `diagrama-*.png`.
+  Se utilizaron servicios y datos temporales para modificar y restaurar la configuración de prueba.
