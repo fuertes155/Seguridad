@@ -1,0 +1,22 @@
+<!-- ENTRADA DEL PANEL: Vite procesa este HTML y sustituye la referencia TSX al compilar. -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Hace que el ancho CSS corresponda al dispositivo para que funcionen los estilos adaptables. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0f14" />
+    <meta
+      name="description"
+      content="HoneyShield. Laboratorio de detección, análisis y respuesta a actividad sospechosa."
+    />
+    <title>HoneyShield — Centro de operaciones</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <!-- React monta App dentro de este contenedor. -->
+    <div id="root"></div>
+    <!-- Entrada de desarrollo. npm run build genera archivos JavaScript que el navegador sí puede ejecutar. -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

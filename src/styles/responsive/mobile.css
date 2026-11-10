@@ -1,0 +1,267 @@
+/* MÓVIL: distribución en menos columnas, navegación inferior y controles ajustados al ancho. */
+@media (max-width: 760px) {
+  .main-content {
+    padding: 24px 20px 95px;
+  }
+  .topbar {
+    padding: 0 16px;
+  }
+  .breadcrumb {
+    gap: 8px;
+  }
+  .breadcrumb > span,
+  .breadcrumb > svg {
+    display: none;
+  }
+  .topbar-right {
+    gap: 6px;
+  }
+  .portal-shortcut {
+    font-size: 11px;
+  }
+  .topbar-divider,
+  .topbar-right .avatar {
+    display: none;
+  }
+  .page-heading {
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .page-heading h1 {
+    font-size: 26px;
+  }
+  .page-heading p {
+    font-size: 12px;
+  }
+  .page-heading .eyebrow {
+    font-size: 8px;
+  }
+  .heading-actions .button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  .command-banner {
+    min-height: 0;
+    padding: 26px;
+  }
+  .command-copy {
+    max-width: 100%;
+  }
+  .command-copy h2 {
+    font-size: 30px;
+  }
+  .command-visual {
+    display: none;
+  }
+  .command-copy p {
+    max-width: 400px;
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .metric-card {
+    padding: 17px;
+  }
+  .metric-top {
+    font-size: 12px;
+  }
+  .metric-value {
+    font-size: 34px;
+  }
+  .metric-icon {
+    width: 31px;
+    height: 31px;
+  }
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  .activity-chart {
+    height: 215px;
+  }
+  .bar-label {
+    font-size: 9px;
+  }
+  .distribution-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .distribution-panel .panel-header {
+    grid-column: 1 / -1;
+  }
+  .ring-wrap {
+    margin: 0 auto 15px;
+    width: 165px;
+    height: 165px;
+  }
+  .distribution-list {
+    margin: 0 24px 16px 0;
+  }
+  .attention-strip {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .attention-strip .text-button {
+    margin-left: 51px;
+    padding: 0;
+  }
+  .lab-banner {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 14px;
+  }
+  .lab-banner > .button {
+    margin-left: 62px;
+  }
+  .lab-banner h3 {
+    font-size: 13px;
+  }
+  .main-footer {
+    font-size: 9px;
+  }
+  .response-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 20px;
+  }
+  .section-summary p {
+    max-width: none;
+  }
+  .alert-card {
+    padding: 20px;
+    gap: 13px;
+  }
+  .alert-symbol {
+    width: 35px;
+    height: 39px;
+  }
+  .alert-main h3 {
+    font-size: 15px;
+  }
+  .alert-bottom {
+    gap: 12px;
+  }
+  .alert-card > .icon-button {
+    width: 30px;
+    height: 32px;
+  }
+  .filter-toolbar {
+    padding: 16px;
+    gap: 15px;
+  }
+  .toolbar-end {
+    width: 100%;
+  }
+  .search-input {
+    flex: 1;
+    min-width: 0;
+  }
+  .search-input input {
+    width: 100%;
+    min-width: 0;
+  }
+  .panel-footer .live-label {
+    display: none;
+  }
+  .rules-list {
+    grid-template-columns: 1fr;
+  }
+  .rule-card:first-child {
+    grid-column: auto;
+  }
+  .lab-topology {
+    gap: 12px;
+    padding: 20px 16px;
+  }
+  .lab-topology > div {
+    flex: 1;
+  }
+  .lab-topology > .button {
+    flex-basis: 100%;
+    margin-top: 8px;
+  }
+  .topology-connector {
+    max-width: 28px;
+  }
+  .lab-topology small {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+  .lab-topology strong {
+    font-size: 11px;
+  }
+  .scenario-card {
+    padding: 21px;
+  }
+  .rule-controls {
+    flex-wrap: wrap;
+  }
+  .rule-controls label {
+    flex: 1;
+    min-width: 120px;
+  }
+  .rule-controls input {
+    width: 100%;
+  }
+  .rule-controls .button {
+    width: 100%;
+  }
+  .rule-card {
+    padding: 22px;
+  }
+  .mobile-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    gap: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 10px max(8px, env(safe-area-inset-bottom));
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -4px 18px #0b142a06;
+    z-index: 35;
+  }
+  .mobile-nav button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 4px;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: var(--muted);
+    font-size: 10px;
+  }
+  .mobile-nav button.active {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--amber) 10%, var(--surface));
+    font-weight: 600;
+  }
+  .toast {
+    bottom: 85px;
+    width: max-content;
+    font-size: 11px;
+  }
+  .login-art {
+    padding: 35px;
+  }
+  .login-side {
+    padding: 30px;
+  }
+  .login-copy h1 {
+    font-size: 39px;
+  }
+  .login-copy p {
+    font-size: 12px;
+  }
+}

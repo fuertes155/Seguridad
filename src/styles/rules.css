@@ -1,0 +1,162 @@
+/* REGLAS: presentación de activación y parámetros; los valores se guardan mediante RuleCard en React. */
+.rule-card {
+  padding: 25px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.rule-card:first-child {
+  grid-column: 1 / -1;
+}
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+.rule-header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.rule-header code {
+  color: var(--muted);
+  font-size: 11px;
+}
+.switch {
+  width: 39px;
+  height: 23px;
+  background: var(--muted);
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+.switch span {
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px #0002;
+  transition: transform 0.18s;
+}
+.switch.on {
+  background: var(--green);
+}
+.switch.on span {
+  transform: translateX(15px);
+}
+.rule-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.rule-card > p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 700px;
+}
+.rule-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.rule-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.rule-controls input {
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 160px;
+  font-size: 13px;
+}
+.rule-controls .button {
+  min-height: 39px;
+}
+.rule-example {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px;
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.rule-example svg {
+  margin-top: 3px;
+}
+.rule-state {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+.error-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid color-mix(in srgb, var(--red) 30%, var(--line));
+  background: color-mix(in srgb, var(--red) 6%, var(--surface));
+  color: var(--red);
+  border-radius: 9px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  font-size: 12px;
+}
+.error-banner button {
+  border: 0;
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+}
+.toast {
+  position: fixed;
+  bottom: 26px;
+  left: calc(50% + 124px);
+  transform: translateX(-50%);
+  z-index: 100;
+  background: #182b25;
+  color: #e5f3eb;
+  border: 1px solid #476658;
+  box-shadow: 0 12px 35px #0b142c25;
+  border-radius: 12px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  max-width: min(600px, calc(100vw - 32px));
+  line-height: 1.6;
+}
+.toast > svg {
+  color: #95d4b5;
+}
+.toast button {
+  border: 0;
+  background: none;
+  color: #b6c6be;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  padding: 4px;
+}

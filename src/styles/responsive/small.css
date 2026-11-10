@@ -1,0 +1,328 @@
+/* TELÉFONOS ESTRECHOS: reduce adornos y espaciado para conservar controles y texto útiles. */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 22px 16px 93px;
+  }
+  .topbar {
+    padding: 0 12px;
+  }
+  .breadcrumb strong {
+    font-size: 11px;
+  }
+  .portal-shortcut {
+    font-size: 0;
+    gap: 0;
+    width: 28px;
+    justify-content: center;
+  }
+  .portal-shortcut svg {
+    width: 16px;
+    height: 16px;
+  }
+  .theme-toggle,
+  .notification-button {
+    width: 32px;
+    height: 34px;
+  }
+  .page-heading {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .heading-actions {
+    width: 100%;
+  }
+  .heading-actions .button {
+    min-height: 38px;
+  }
+  .page-heading h1 {
+    font-size: 27px;
+  }
+  .command-banner {
+    padding: 23px 21px;
+    border-radius: 13px;
+  }
+  .command-copy h2 {
+    font-size: 28px;
+  }
+  .command-label {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+  .command-actions {
+    gap: 9px;
+  }
+  .command-actions .button {
+    width: 100%;
+    justify-content: space-between;
+    min-height: 42px;
+  }
+  .overview-status {
+    font-size: 10px;
+    align-items: flex-start;
+  }
+  .overview-status > div {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .overview-status > div > span:last-child,
+  .overview-status > div > .muted {
+    display: none;
+  }
+  .overview-status > span {
+    white-space: nowrap;
+    gap: 5px;
+  }
+  .metrics-grid {
+    gap: 10px;
+  }
+  .metric-card {
+    padding: 14px;
+  }
+  .metric-top {
+    font-size: 11px;
+    gap: 5px;
+  }
+  .metric-icon {
+    width: 26px;
+    height: 28px;
+  }
+  .metric-icon svg {
+    width: 15px;
+  }
+  .metric-value {
+    font-size: 31px;
+  }
+  .mini-spark {
+    gap: 2px;
+  }
+  .mini-spark i {
+    width: 3px;
+  }
+  .panel-header {
+    padding: 19px 18px 16px;
+    gap: 10px;
+  }
+  .panel-header h2 {
+    font-size: 14px;
+  }
+  .subtle-tag {
+    font-size: 9px;
+    padding: 5px 6px;
+  }
+  .subtle-tag svg {
+    display: none;
+  }
+  .chart-legend {
+    padding: 0 18px;
+    gap: 14px;
+  }
+  .activity-chart {
+    margin: 19px 16px;
+    height: 195px;
+  }
+  .chart-bars {
+    gap: 4px;
+    left: 31px;
+  }
+  .chart-grid > div > span {
+    width: 18px;
+  }
+  .chart-grid > div {
+    gap: 10px;
+  }
+  .bar-label {
+    font-size: 8px;
+  }
+  .chart-bin:nth-child(even) .bar-label {
+    visibility: hidden;
+  }
+  .chart-total small {
+    display: none;
+  }
+  .ring-wrap {
+    width: 147px;
+    height: 147px;
+  }
+  .distribution-list {
+    margin-right: 15px;
+  }
+  .distribution-list > div {
+    font-size: 10px;
+  }
+  .ring-label strong {
+    font-size: 29px;
+  }
+  .ring-label span {
+    font-size: 9px;
+  }
+  .attention-strip {
+    padding: 16px;
+    gap: 10px;
+  }
+  .attention-strip > div {
+    min-width: 0;
+  }
+  .attention-strip h3 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .attention-strip p {
+    line-height: 1.6;
+  }
+  .attention-icon {
+    width: 32px;
+    height: 35px;
+  }
+  .attention-strip .text-button {
+    margin-left: 42px;
+  }
+  .inline-heading {
+    gap: 8px;
+  }
+  .inline-heading .live-label {
+    font-size: 8px;
+  }
+  .panel-header .text-button {
+    font-size: 11px;
+  }
+  .lab-banner {
+    gap: 12px;
+    padding: 18px;
+  }
+  .lab-banner-icon {
+    width: 38px;
+    height: 44px;
+  }
+  .lab-banner > .button {
+    margin-left: 50px;
+  }
+  .lab-banner .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .main-footer > span:last-child {
+    font-size: 8px;
+  }
+  .scenario-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .scenario-top {
+    margin-bottom: 17px;
+  }
+  .scenario-card h3 {
+    font-size: 16px;
+  }
+  .scenario-card > p {
+    font-size: 13px;
+  }
+  .scenario-expected {
+    font-size: 11px;
+  }
+  .scenario-card .button {
+    min-height: 44px;
+  }
+  .guide-card .eyebrow {
+    margin-bottom: 18px;
+  }
+  .guide-card h3 {
+    font-size: 25px;
+  }
+  .lab-topology {
+    gap: 6px;
+  }
+  .topology-connector {
+    max-width: 14px;
+  }
+  .topology-connector i {
+    display: none;
+  }
+  .lab-topology strong {
+    font-size: 10px;
+  }
+  .topology-icon {
+    width: 39px;
+    height: 41px;
+  }
+  .alert-card {
+    gap: 10px;
+    padding: 18px 16px;
+  }
+  .alert-symbol {
+    display: none;
+  }
+  .alert-card > .icon-button {
+    width: 27px;
+  }
+  .alert-meta {
+    gap: 8px;
+  }
+  .alert-bottom .source code {
+    font-size: 10px;
+  }
+  .detail-drawer {
+    padding: 0 22px 25px;
+  }
+  .detail-drawer h2 {
+    font-size: 25px;
+  }
+  .detail-fields > div {
+    font-size: 11px;
+  }
+  .detail-fields code {
+    font-size: 10px;
+  }
+  .detail-description {
+    padding: 13px;
+    font-size: 12px;
+  }
+  .drawer-actions .button {
+    min-height: 44px;
+  }
+  .filter-tabs button {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .toolbar-end .button {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+  .section-summary {
+    padding: 19px;
+  }
+  .rules-intro {
+    gap: 13px;
+    align-items: flex-start;
+  }
+  .rules-intro h3 {
+    font-size: 16px;
+  }
+  .rules-intro .square-icon {
+    width: 40px;
+    height: 43px;
+    flex-shrink: 0;
+  }
+  .login-screen {
+    grid-template-columns: 1fr;
+  }
+  .login-art {
+    padding: 25px;
+  }
+  .login-copy,
+  .login-bottom {
+    display: none;
+  }
+  .login-side {
+    padding: 35px 26px;
+    align-items: flex-start;
+  }
+  .login-form .square-icon {
+    display: none;
+  }
+  .login-form h2 {
+    margin-top: 0;
+  }
+  .login-form {
+    max-width: 380px;
+  }
+}

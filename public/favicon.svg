@@ -1,0 +1,2 @@
+<!-- Icono vectorial de HoneyShield: viewBox define el lienzo; rect y path forman el emblema. No contiene lógica de aplicación. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#f5b94f"/><path d="M24 8 37 15v16L24 39 11 31V15z" fill="none" stroke="#15191f" stroke-width="3"/><path d="M18 17v14m12-14v14m-12-7h12" stroke="#15191f" stroke-width="3"/></svg>

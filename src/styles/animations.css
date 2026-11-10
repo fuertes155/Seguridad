@@ -1,0 +1,17 @@
+/* Animación breve al abrir el detalle; no afecta el tiempo de detección. */
+@keyframes drawer-in {
+  from {
+    transform: translateX(20px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Animación visual de carga; no representa progreso porcentual de una operación. */
+@keyframes load {
+  to {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,41 @@
+/* ESTILOS DE HONEYSHIELD: presentación visual, temas, estados y adaptación a pantalla. */
+/* La seguridad y las reglas viven en Python; estas reglas CSS solo cambian la apariencia. */
+/* HoneyShield: shared design tokens and responsive application surfaces. */
+/* VARIABLES DE DISEÑO: colores y tipografía compartidos mediante var(--nombre). Cambiarlos actualiza todas las vistas. */
+:root {
+  font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+  --bg: #f3f5f8;
+  --surface: #fff;
+  --surface-2: #f7f8fb;
+  --line: #e3e7ee;
+  --text: #192338;
+  --muted: #68758a;
+  --amber: #efb54e;
+  --accent: #95600b;
+  --red: #ce4c60;
+  --green: #248366;
+  --blue: #527dc1;
+  --shadow: 0 4px 18px #16254104;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 14px;
+}
+/* TEMA OSCURO: sobrescribe variables; React modifica data-theme en el elemento html. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1521;
+  --surface: #151f2e;
+  --surface-2: #1c2839;
+  --line: #2b3749;
+  --text: #edf2fa;
+  --muted: #a1aec2;
+  --accent: #f1bc60;
+  --red: #f18d99;
+  --green: #7ad0ae;
+  --blue: #94b7ed;
+  --shadow: 0 4px 18px #00000010;
+}

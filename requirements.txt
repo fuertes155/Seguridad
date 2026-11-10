@@ -1,0 +1,12 @@
+# Dependencias Python directas: intervalos compatibles para desarrollo.
+# El instalador usa requirements-lock.txt con versiones exactas.
+# API HTTP y validación de contratos mediante Pydantic.
+fastapi>=0.115,<1
+# Servidor ASGI que ejecuta FastAPI y soporta WebSocket.
+uvicorn[standard]>=0.34,<1
+# Cliente HTTP para colector, salud y escenarios.
+httpx>=0.28,<1
+# Generación de informes PDF en memoria.
+reportlab>=4.3,<5
+# Ejecución de las pruebas de integración.
+pytest>=8.3,<9

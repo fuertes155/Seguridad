@@ -1,0 +1,100 @@
+/* PANTALLAS AMPLIAS: aumenta separación y tamaño de gráficos manteniendo la misma información. */
+@media (min-width: 1600px) {
+  .main-content {
+    padding: 38px 48px 24px;
+  }
+  .command-banner {
+    padding: 33px 40px;
+  }
+  .command-copy h2 {
+    font-size: 37px;
+  }
+  .command-visual {
+    margin-right: 60px;
+  }
+  .metric-card {
+    padding: 23px;
+  }
+  .metric-value {
+    font-size: 40px;
+  }
+  .activity-chart {
+    height: 245px;
+  }
+  .topbar {
+    padding: 0 48px;
+  }
+}
+/* ANCHO INTERMEDIO: compacta espacios y reorganiza escenarios antes de llegar a móvil. */
+@media (max-width: 1240px) {
+  .main-content {
+    padding: 27px 25px 20px;
+  }
+  .topbar {
+    padding: 0 25px;
+  }
+  .topbar-right {
+    gap: 9px;
+  }
+  .environment {
+    display: none;
+  }
+  .command-banner {
+    padding: 26px;
+  }
+  .command-copy h2 {
+    font-size: 29px;
+  }
+  .command-visual {
+    width: 210px;
+    min-width: 210px;
+    transform: scale(0.87);
+    margin-right: -20px;
+    margin-left: -10px;
+  }
+  .metrics-grid {
+    gap: 12px;
+  }
+  .metric-card {
+    padding: 16px;
+  }
+  .metric-top {
+    font-size: 11px;
+  }
+  .metric-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .metric-icon svg {
+    width: 17px;
+  }
+  .mini-spark {
+    gap: 3px;
+  }
+  .mini-spark i {
+    width: 3px;
+  }
+  .charts-grid {
+    grid-template-columns: minmax(0, 1.6fr) minmax(245px, 1fr);
+    gap: 15px;
+  }
+  .bar-label {
+    font-size: 8px;
+  }
+  .chart-bars {
+    gap: 6px;
+  }
+  .scenario-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lab-topology {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .lab-topology > .button {
+    margin-left: 0;
+  }
+  .main-footer > span:nth-child(2) {
+    display: none;
+  }
+}

@@ -1,0 +1,194 @@
+/* TABLAS: permite desplazamiento horizontal cuando sus columnas no caben en una pantalla pequeña. */
+.table-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  background: var(--surface-2);
+  padding: 12px 23px;
+  white-space: nowrap;
+}
+td {
+  font-size: 12px;
+  border-top: 1px solid var(--line);
+  padding: 15px 23px;
+}
+td:last-child {
+  text-align: right;
+}
+.events-table {
+  min-width: 650px;
+}
+.events-table tbody tr {
+  cursor: pointer;
+}
+.events-table tbody tr:hover {
+  background: var(--surface-2);
+}
+.events-table td:last-child {
+  padding-left: 0;
+  padding-right: 16px;
+  width: 40px;
+}
+.event-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.event-symbol {
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  color: var(--muted);
+  width: 34px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+.event-cell.high .event-symbol {
+  color: var(--red);
+  background: color-mix(in srgb, var(--red) 7%, var(--surface));
+}
+.event-cell.medium .event-symbol {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--amber) 9%, var(--surface));
+}
+.event-cell.low .event-symbol {
+  color: var(--green);
+  background: color-mix(in srgb, var(--green) 8%, var(--surface));
+}
+.event-cell strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.event-cell code {
+  color: var(--muted);
+  font-size: 10px;
+}
+/* Presentación del origen observado; el icono distingue laboratorio y conexión por IP. */
+.source {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.source code {
+  font-size: 11px;
+}
+.source-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+}
+/* SEVERIDAD: estilos para informativo, bajo, medio y alto; el texto mantiene el significado sin color. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  padding: 5px 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 10px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.badge i {
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.badge.high {
+  color: var(--red);
+  border-color: color-mix(in srgb, var(--red) 15%, transparent);
+  background: color-mix(in srgb, var(--red) 7%, var(--surface));
+}
+.badge.medium {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--amber) 28%, transparent);
+  background: color-mix(in srgb, var(--amber) 10%, var(--surface));
+}
+.badge.low {
+  color: var(--green);
+  border-color: color-mix(in srgb, var(--green) 18%, transparent);
+  background: color-mix(in srgb, var(--green) 7%, var(--surface));
+}
+.lab-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  border: 1px dashed var(--line);
+  border-radius: 13px;
+  margin-top: 22px;
+  background: var(--surface);
+}
+.lab-banner-icon {
+  width: 48px;
+  height: 51px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--amber) 10%, var(--surface));
+  flex-shrink: 0;
+}
+.lab-banner > div:nth-child(2) {
+  flex: 1;
+}
+.lab-banner .eyebrow {
+  font-size: 8px;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+.lab-banner h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.lab-banner p {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: var(--muted);
+  font-size: 10px;
+  padding-top: 30px;
+  line-height: 1.6;
+}
+.main-footer > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.main-footer b {
+  font-size: 9px;
+  font-weight: 500;
+  border: 1px solid var(--line);
+  padding: 1px 4px;
+  border-radius: 4px;
+}

@@ -1,0 +1,7 @@
+# Archivos generados y carpetas ajenas al código fuente que Prettier no debe reformatear.
+dist
+node_modules
+.runtime
+.venv
+output
+package-lock.json

@@ -1,0 +1,22 @@
+/* Entrada de estilos. Mantener este orden conserva la cascada y las prioridades originales. */
+@import "./styles/tokens.css";
+@import "./styles/base.css";
+@import "./styles/buttons.css";
+@import "./styles/layout.css";
+@import "./styles/hero.css";
+@import "./styles/metrics.css";
+@import "./styles/charts.css";
+@import "./styles/tables.css";
+@import "./styles/filters.css";
+@import "./styles/alerts.css";
+@import "./styles/response.css";
+@import "./styles/lab.css";
+@import "./styles/rules.css";
+@import "./styles/details.css";
+@import "./styles/login.css";
+@import "./styles/animations.css";
+@import "./styles/responsive/desktop.css";
+@import "./styles/responsive/tablet.css";
+@import "./styles/responsive/mobile.css";
+@import "./styles/responsive/small.css";
+@import "./styles/responsive/accessibility.css";

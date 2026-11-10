@@ -1,0 +1,204 @@
+/* PRESENTACIÓN DEL LABORATORIO: composición visual y accesos a pruebas. El radar es decorativo, no un sensor de red. */
+.command-banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: #142338;
+  border: 1px solid #293b53;
+  border-radius: 17px;
+  padding: 30px 34px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  color: #f6f7fc;
+  min-height: 246px;
+}
+.command-banner:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#a6bed106 1px, transparent 1px),
+    linear-gradient(90deg, #a6bed106 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+.command-copy {
+  z-index: 1;
+  max-width: 590px;
+}
+.command-label {
+  color: #a5b9d2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+}
+.command-label .status-light {
+  background: #7bd1ad;
+}
+.command-label .off {
+  background: #8d9eb5;
+}
+.command-copy h2 {
+  font-size: 32px;
+  line-height: 1.24;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 16px 0 12px;
+}
+.command-copy h2 span {
+  color: #efc57f;
+}
+.command-copy p {
+  color: #a7b5ca;
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 390px;
+}
+.command-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.command-actions .button {
+  font-size: 12px;
+  min-height: 40px;
+}
+.command-secondary {
+  border-color: #3b4b61;
+  color: #d9e3f1;
+  background: #ffffff04;
+}
+.command-secondary:hover {
+  background: #ffffff0c;
+}
+.command-visual {
+  position: relative;
+  width: 260px;
+  min-width: 260px;
+  align-self: center;
+  height: 228px;
+  margin: -10px 10px -10px 20px;
+  opacity: 0.95;
+}
+.radar-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #6e8aa52a;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+}
+.orbit-outer {
+  width: 220px;
+  height: 220px;
+}
+.orbit-middle {
+  width: 160px;
+  height: 160px;
+}
+.orbit-inner {
+  width: 100px;
+  height: 100px;
+  border-color: #ddb66d38;
+  background: #edbc6505;
+}
+.radar-axis {
+  position: absolute;
+  background: #6e8aa51c;
+}
+.axis-x {
+  width: 244px;
+  height: 1px;
+  left: 8px;
+  top: 46%;
+}
+.axis-y {
+  height: 210px;
+  width: 1px;
+  left: 50%;
+  top: 0;
+}
+.radar-core {
+  width: 70px;
+  height: 78px;
+  color: #e9bc6a;
+  background: #e9bc6510;
+  border: 1px solid #e9bc6526;
+  border-radius: 19px;
+  position: absolute;
+  left: calc(50% - 35px);
+  top: 66px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 45px #eabd6410;
+}
+.radar-point {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #dfb569;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #e9bc6510;
+}
+.point-one {
+  left: 50px;
+  top: 62px;
+}
+.point-two {
+  right: 43px;
+  top: 147px;
+  background: #79c7ae;
+}
+.point-three {
+  left: 158px;
+  top: 22px;
+  width: 5px;
+  height: 5px;
+  background: #88a8cf;
+}
+.radar-label {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  border-radius: 9px;
+  border: 1px solid #34455b;
+  background: #1b2c42;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  color: #c4d2e4;
+  white-space: nowrap;
+}
+.radar-label .tiny-dot {
+  background: #7ad0ae;
+}
+.radar-label .off {
+  background: #8d9eb5;
+}
+.overview-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.overview-status > div,
+.overview-status > span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.overview-status strong {
+  color: var(--text);
+  font-weight: 600;
+}

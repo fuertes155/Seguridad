@@ -1,0 +1,215 @@
+/* LABORATORIO: representación visual de cliente, señuelo y panel; no configura una red externa. */
+.lab-topology {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 25px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 23px;
+}
+.lab-topology > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+}
+.topology-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 49px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  color: var(--blue);
+  border: 1px solid var(--line);
+}
+.topology-icon.amber {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--amber) 9%, var(--surface));
+}
+.topology-icon.green {
+  color: var(--green);
+  background: color-mix(in srgb, var(--green) 7%, var(--surface));
+}
+.lab-topology strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+.lab-topology small {
+  font-size: 10px;
+  color: var(--muted);
+}
+.topology-connector {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 85px;
+  color: var(--muted);
+  margin-top: -28px;
+}
+.topology-connector i {
+  width: 100%;
+  border-top: 1px dashed var(--line);
+}
+.lab-topology > .button {
+  margin-left: auto;
+}
+/* ESCENARIOS: rejilla adaptable de pruebas; cada botón ejecuta una operación en la API. */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+.scenario-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.scenario-card:hover {
+  border-color: color-mix(in srgb, var(--muted) 35%, var(--line));
+}
+.scenario-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.scenario-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 47px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--green) 7%, var(--surface));
+  color: var(--green);
+}
+.scenario-card.amber .scenario-icon {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--amber) 10%, var(--surface));
+}
+.scenario-card.red .scenario-icon {
+  color: var(--red);
+  background: color-mix(in srgb, var(--red) 7%, var(--surface));
+}
+.scenario-card.blue .scenario-icon {
+  color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 7%, var(--surface));
+}
+.scenario-number {
+  font-size: 25px;
+  font-weight: 300;
+  color: color-mix(in srgb, var(--muted) 45%, var(--surface));
+  font-variant-numeric: tabular-nums;
+}
+.scenario-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.scenario-card > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.scenario-expected {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+.scenario-expected .tiny-dot {
+  width: 5px;
+  height: 5px;
+}
+.scenario-card .button {
+  font-size: 12px;
+  justify-content: space-between;
+}
+.guide-card {
+  background: #17283d;
+  border-color: #34445a;
+  color: #eef3f9;
+  justify-content: center;
+}
+.guide-card:hover {
+  border-color: #62748b;
+}
+.guide-card .eyebrow {
+  color: #c6a66e;
+  font-size: 9px;
+  margin-bottom: 27px;
+}
+.guide-card h3 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.guide-card p {
+  color: #aabbd1;
+}
+.guide-card .text-button {
+  justify-content: flex-start;
+  color: #efc179;
+}
+.runs-table {
+  min-width: 700px;
+}
+.runs-table strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+.runs-table small {
+  display: block;
+  margin-top: 6px;
+}
+.runs-table td {
+  font-size: 11px;
+}
+.run-state {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  white-space: nowrap;
+  color: var(--muted);
+}
+.run-state.completed {
+  color: var(--green);
+}
+.run-state.failed {
+  color: var(--red);
+}
+.rules-intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+.rules-intro h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.rules-intro p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 7px;
+  line-height: 1.7;
+}
+.rules-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}

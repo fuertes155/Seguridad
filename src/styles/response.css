@@ -1,0 +1,117 @@
+/* RESPUESTA: muestra en paralelo contención y bitácora; en móvil pasa a una sola columna. */
+.response-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 20px;
+  align-items: start;
+}
+.count-badge {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 22px;
+  padding: 2px 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 11px;
+  margin-left: 5px;
+}
+.blocks-list {
+  padding: 0 23px;
+}
+.block-card {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0 22px;
+}
+.block-card:last-child {
+  border-bottom: 0;
+}
+.block-top,
+.block-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+}
+.block-card p {
+  margin: 13px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.block-bottom > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+/* BITÁCORA: línea temporal de acciones reales del analista, sin modificar su orden guardado. */
+.audit-timeline {
+  padding: 5px 24px 25px;
+  max-height: 560px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.audit-item {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  padding: 0 0 23px;
+}
+.audit-item:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 1px;
+  top: 12px;
+  bottom: 2px;
+  background: var(--line);
+}
+.audit-item:last-child {
+  padding-bottom: 0;
+}
+.audit-item:last-child:before {
+  display: none;
+}
+.audit-dot {
+  width: 9px;
+  height: 9px;
+  background: var(--surface-2);
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+.audit-item p {
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.audit-item time {
+  font-size: 10px;
+  color: var(--muted);
+  display: block;
+  margin-top: 5px;
+}
+.info-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 22px;
+  color: var(--muted);
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: 10px;
+}
+.info-note > svg {
+  margin-top: 2px;
+}
+.info-note p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+.info-note code {
+  font-size: 10px;
+}

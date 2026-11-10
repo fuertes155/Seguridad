@@ -1,0 +1,121 @@
+/* DETALLE MODAL: fondo superpuesto para mantener atención en la evidencia seleccionada. */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: #07122465;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: flex-end;
+}
+/* Panel de detalle con desplazamiento propio; el componente gestiona foco, Escape y cierre. */
+.detail-drawer {
+  width: 510px;
+  max-width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  padding: 0 30px 24px;
+  box-shadow: -15px 0 60px #00000010;
+  animation: drawer-in 0.2s ease-out;
+}
+.drawer-heading {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: var(--surface);
+  padding: 20px 0 17px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 25px;
+}
+.drawer-heading .eyebrow {
+  font-size: 9px;
+}
+.detail-icon {
+  width: 57px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--amber) 25%, var(--line));
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--amber) 9%, var(--surface));
+  margin-bottom: 23px;
+}
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.detail-meta > code {
+  font-size: 11px;
+  color: var(--muted);
+}
+.detail-drawer h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+  margin-bottom: 17px;
+}
+.detail-description {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  padding: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.detail-fields {
+  margin: 23px 0 0;
+}
+.detail-fields > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.detail-fields dt {
+  color: var(--muted);
+}
+.detail-fields dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.detail-fields code {
+  font-size: 11px;
+}
+.detail-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--muted);
+  margin: 23px 0;
+}
+.detail-note svg {
+  margin-top: 2px;
+}
+.detail-note p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+.drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--surface);
+  padding-top: 8px;
+}
