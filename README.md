@@ -114,6 +114,7 @@ La validación realizada en este equipo encontró ambos puertos abiertos y etiqu
 | `src/interface.css`, `src/styles/`        | Índice de estilos y archivos separados por sección y tamaño de pantalla. |
 | `backend/admin.py`                        | Autenticación, API, escenarios, bloqueos y exportaciones.       |
 | `backend/decoy.py`, `backend/portal.html` | Portal señuelo instrumentado.                                   |
+| `backend/novatech.css`                   | Paleta azul noche, violeta y cian de NovaTech; estilos de escritorio, móvil y estados de respuesta. |
 | `backend/store.py`                        | SQLite, reglas y registro transaccional.                        |
 | `tests/test_system.py`                    | Pruebas de integración.                                         |
 | `.runtime/`                               | Datos privados, credenciales, registros de servicio y sesiones. |
@@ -163,6 +164,10 @@ paneles de detalle. Las reglas de detección siguen evaluándose en el servidor 
 `interface.css` solo importa los archivos de `styles` en el orden original. Allí se separan variables,
 botones, estructura, tablas y secciones; `styles/responsive` contiene los ajustes por tamaño y accesibilidad.
 El orden de las importaciones conserva la prioridad de las reglas CSS.
+
+NovaTech tiene una hoja independiente en `backend/novatech.css`. Sus variables `:root` reúnen los colores
+de fondos, textos, botones, campos y mensajes. El portal la carga desde `/assets/novatech.css`; esa solicitud
+técnica no genera eventos de navegación. Los cambios de estilos se ven al recargar NovaTech.
 
 La ejecución sigue siendo la misma: `INICIAR-HONEYSHIELD.cmd` abre los dos servicios. Después de editar
 archivos de `src`, ejecuta `npm run build` y recarga el panel para usar la compilación actualizada.

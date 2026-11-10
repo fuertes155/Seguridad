@@ -88,3 +88,17 @@ Los JSON de dependencias y TypeScript permanecen intactos; se explican en README
   Los datos y servicios usados para estas pruebas fueron temporales, separados del laboratorio del usuario.
 - La forma de iniciar y detener HoneyShield se conserva. README.md y EXPOSICION.md indican las nuevas
   ubicaciones de las funciones para la exposición.
+
+## Nueva paleta de NovaTech · 10 de noviembre de 2026
+
+- Colores renovados en todo el portal: azul noche en fondos y superficies, violeta en acentos y botones,
+  cian en marca y respuestas correctas, y rosa en mensajes de rechazo o error.
+- Estilos separados en `backend/novatech.css`, con variables de color centralizadas. La ruta de esta hoja
+  devuelve CSS y no añade eventos al laboratorio. El contenido de los formularios y el JavaScript se conservan.
+- 20 pruebas de integración aprobadas; resultado en `output/evidence/pruebas-novatech-paleta.xml`.
+- 11 comprobaciones de navegador aprobadas: carga de estilos, contraste, adaptación móvil, foco, estados de
+  formularios, las tres detecciones, bloqueo y desbloqueo, error de conexión y movimiento reducido.
+- Pares de texto revisados con contraste mínimo de 4,5:1; borde de campos superior a 3:1 frente a su fondo.
+  Sin desbordamiento de página a 321, 390 y 768 px; escritorio revisado a 1440 px.
+- Evidencia en `output/evidence/novatech-paleta-validacion.json` y capturas `novatech-nueva-paleta*.png`.
+  Las comprobaciones funcionales usaron servicios y datos temporales.

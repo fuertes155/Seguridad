@@ -35,8 +35,8 @@ def identity(request):
 # request.state.event transporta información entre el middleware y la función de la ruta.
 @app.middleware('http')
 async def instrument(request: Request, call_next):
-    # Excluye solicitudes técnicas de salud e icono para no contaminar la evidencia.
-    if request.url.path == '/health': return await call_next(request)
+    # Salud y hoja de estilos son solicitudes técnicas; no deben generar eventos de navegación.
+    if request.url.path in {'/health','/assets/novatech.css'}: return await call_next(request)
     # Excluye solicitudes técnicas de salud e icono para no contaminar la evidencia.
     if request.url.path == '/favicon.ico': return Response(status_code=204)
     source, run_id = identity(request)
@@ -77,6 +77,12 @@ async def instrument(request: Request, call_next):
 # Comprobación ligera para saber que este servicio responde; no genera evidencia de navegación.
 @app.get('/health')
 def health(): return {'status':'ok','service':'honeyshield-decoy'}
+
+# Sirve únicamente esta hoja de estilos local. No acepta rutas de archivos del visitante.
+# Se lee en cada solicitud para que un cambio de paleta aparezca al recargar el portal.
+@app.get('/assets/novatech.css')
+async def portal_styles():
+    return Response((ROOT/'backend'/'novatech.css').read_text(encoding='utf-8'),media_type='text/css',headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'})
 
 # Lee el cuerpo por fragmentos con límite de 8 KiB y exige un objeto JSON.
 # El límite se verifica al leer, no solo mediante la cabecera Content-Length.
